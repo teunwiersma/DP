@@ -21,7 +21,7 @@ public class OVChipkaartOracleDaolmpl extends oracleBaseDAO implements OVChipkaa
 		
 		try {
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from ov_chipkaart o, reiziger r, where r.reizigerid = o.reizigerid");
+			ResultSet rs = stmt.executeQuery("select * from ov_chipkaart o, reiziger r where r.reizigerid = o.reizigerid");
 			while (rs.next()) {
 				ov = new OVChipkaart(rs.getInt(1), rs.getDate(2), rs.getInt(3),
 						rs.getInt(4), reiziger);

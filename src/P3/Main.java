@@ -13,7 +13,6 @@ public class Main {
 
         Reiziger r1 = new Reiziger(6, "H", "van", "Boom", Date.valueOf("1997-05-31"));
         OVChipkaart ov1 = new OVChipkaart( 5000, Date.valueOf("2020-02-06"), 1, 500, r1);
-		
 
         //rDAO.save(r1);
         //rDAO.delete(r1);
@@ -50,7 +49,6 @@ public class Main {
         for(OVChipkaart listID : ovDAO.findByReiziger(r1)) {
         	System.out.println(listID);
         }
-        
 
 		System.out.println("");
 		System.out.println("OVCHIPKAART PRODUCTEN");
